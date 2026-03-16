@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Loader Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="loader.css">
+</head>
+<body onload="myfunction()" style="margin: 0;">
+    <div id="loader"></div>
+    <div style="display: none;" id="myDiv" class="animation-button">
+        <h2>Tada..!!</h2>
+        <p>Some Text In My Newly Loaded Page..</p>
+    </div>
+    <script>
+        var myVar;
+
+        function myfunction() {
+            myVar = setTimeout(showPage, 3000);
+        }
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("myDiv").style.display = "block";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+  <head>
+    <title>Canvas Demo</title>
+  </head>
+  <body>
+    <canvas
+      id="canvas"
+      width="200"
+      height="100"
+      style="border: 1px solid #000"
+    ></canvas>
+    <script>
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+      ctx.moveTo(0, 0);
+      ctx.lineTo(175, 75);
+      //   ctx.lineWidth = 10;
+      ctx.linecap = "round";
+      ctx.stroke();
+    </script>
+
+    <canvas
+      id="canvas1"
+      width="200"
+      height="100"
+      style="border: 1px solid #000"
+    ></canvas>
+    <script>
+      var canvas = document.getElementById("canvas1");
+      var ctx = canvas.getContext("2d");
+      ctx.moveTo(100, 20);
+      ctx.lineTo(175, 100);
+      ctx.lineTo(20, 100);
+      ctx.lineTo(100, 20);
+      ctx.stroke();
+    </script>
+
+    <canvas
+      id="mycanvas"
+      width="200"
+      height="100"
+      style="border: 1px solid #000"
+    ></canvas>
+    <script>
+      var c = document.getElementById("mycanvas");
+      var ctx = c.getContext("2d");
+      ctx.beginPath();
+      ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+      ctx.stroke();
+    </script>
+
+    <canvas
+      id="my2canvas"
+      width="200"
+      height="100"
+      style="border: 1px solid #000"
+    ></canvas>
+    <script>
+      var c = document.getElementById("my2canvas");
+      var ctx = c.getContext("2d");
+      ctx.font = "30px arial";
+      ctx.fillText("Hello World!", 10, 50);
+      // ctx.strokeText("Hello World!", 10, 50);
+    </script>
+
+    <canvas
+      id="my3canvas"
+      width="200"
+      height="100"
+      style="border: 1px solid #000"
+    ></canvas>
+    <script>
+      var c = document.getElementById("my3canvas");
+      var ctx = c.getContext("2d");
+      // create gradient
+      // var grd = ctx.createLinearGradient(0,0,200,0);
+      var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+      grd.addColorStop(0, "red");
+      grd.addColorStop(1, "white");
+
+      // fill with gradient
+      ctx.fillStyle = grd;
+      ctx.fillRect(10, 10, 150, 80);
+    </script>
+  </body>
+</html>
