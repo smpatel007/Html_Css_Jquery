@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<head>
+    <title> Pritical One</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!---Custom CSS File--->
+    <style>
+        /* Import Google font - Poppins */
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+        body {
+            font-family: poppins;
+            background-color: rgb(174, 211, 252);
+            margin-top: 4%;
+        }
+
+        #left-side {
+            /* height: 800px; */
+            background-color: #FFFFFF;
+            border-radius: 15px 0 0 15px;
+            margin-bottom: 0;
+
+            header {
+                font-size: 30px;
+                margin-top: 8%;
+                color: #4835D4;
+                font-weight: 500;
+                margin-right: 40%;
+            }
+
+            .form {
+                margin-top: 30px;
+            }
+
+            .form .input-box {
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .input-box label {
+                color: #333;
+            }
+
+            .input-box.add {
+                width: 100%;
+                display: flex;
+                column-gap: 15px;
+            }
+
+            .form :where(.input-box input, .select-box) {
+                position: relative;
+                height: 50px;
+                width: 85%;
+                outline: none;
+                font-size: 1rem;
+                color: #707070;
+                margin-top: 8px;
+                margin-left: 7%;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                padding: 0 15px;
+            }
+
+            .input-box input:focus {
+                box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+            }
+
+            .form .column {
+                display: flex;
+                column-gap: 15px;
+                width: 92%;
+            }
+
+            .address :where(input, .select-box) {
+                margin-top: 15px;
+            }
+
+            .select-box select {
+                height: 100%;
+                width: 100%;
+                outline: none;
+                border: none;
+                color: #707070;
+                font-size: 1rem;
+            }
+
+            .custom-control-label {
+                margin-right: 90px;
+                color: #fff;
+            }
+
+
+        }
+
+        #right-side {
+            /* height: 800px; */
+            background-color: #4835D4;
+            border-radius: 0 15px 15px 0;
+            margin-bottom: 0;
+
+            header {
+                font-size: 30px;
+                margin-top: 7%;
+                color: #FFFFFF;
+                font-weight: 500;
+                margin-right: 50%;
+            }
+
+            .form {
+                margin-top: 30px;
+            }
+
+            .form .input-box {
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .input-box label {
+                color: #333;
+            }
+
+            .input-box.add {
+                width: 100%;
+                display: flex;
+                column-gap: 15px;
+            }
+
+            .form :where(.input-box input, .select-box) {
+                position: relative;
+                height: 50px;
+                width: 85%;
+                outline: none;
+                font-size: 1rem;
+                color: #FFFFFF;
+                margin-top: 8px;
+                margin-left: 7%;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                padding: 0 15px;
+                background: border-box;
+            }
+
+            .input-box input:focus {
+                box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+            }
+
+            .form .column {
+                display: flex;
+                column-gap: 15px;
+                width: 92%;
+            }
+
+            .address :where(input, .select-box) {
+                margin-top: 15px;
+            }
+
+            .select-box select {
+                height: 100%;
+                width: 100%;
+                outline: none;
+                border: none;
+                color: #707070;
+                font-size: 1rem;
+            }
+
+            .form button {
+                height: 55px;
+                width: 30%;
+                color: #000;
+                font-size: 1rem;
+                font-weight: 400;
+                margin-top: 30px;
+                margin-right: 57%;
+                border: 0;
+                border-radius: 10px;
+                cursor: pointer;
+                background: #FFFFFF;
+            }
+
+            .custom-control-label {
+                margin-right: 20%;
+                color: #FFFFFF;
+            }
+
+            input::placeholder {
+                color: #FFFFFF;
+                opacity: 1;
+            }
+
+            input::-ms-input-placeholder {
+                color: #FFFFFF;
+            }
+        }
+
+        /*Responsive*/
+        @media screen and (max-width: 500px) {
+            .form .column {
+                flex-wrap: wrap;
+            }
+
+            .newclass {
+                padding: 10%;
+            }
+
+            #right-side {
+                border-radius: 0 0 15px 15px;
+
+            }
+
+            input.mb {
+                margin-bottom: 18px;
+            }
+
+            .custom-control-label {
+                margin-right: 39px !important;
+                margin-top: -105px;
+                text-align: justify;
+                margin-left: -32px;
+                padding: 82px 82px 0 82px;
+            }
+
+            #left-side {
+                border-radius: 15px 15px 0 0;
+            }
+
+            .form .column {
+                width: 100% !important;
+            }
+
+            input[type="checkbox"] {
+                margin-right: 80%;
+                flex-wrap: wrap;
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="row newclass">
+                <div id="left-side" class="col-sm-6 jumbotron text-center">
+                    <header>General Infomation</header>
+                    <form action="#" class="form">
+                        <div class="select-box">
+                            <select>
+                                <option hidden>Title</option>
+                                <option>America</option>
+                                <option>Japan</option>
+                                <option>India</option>
+                                <option>Nepal</option>
+                            </select>
+                        </div>
+                        <div class="input-box address">
+                            <div class="column">
+                                <input class="mb" type="text" placeholder="First Name" required />
+                                <input type="text" placeholder="Last Name" required />
+                            </div>
+                        </div>
+                        <br>
+                        <div class="select-box">
+                            <select>
+                                <option hidden>Position</option>
+                                <option>America</option>
+                                <option>Japan</option>
+                                <option>India</option>
+                                <option>Nepal</option>
+                            </select>
+                        </div>
+                        <div class="input-box add">
+                            <input type="text" placeholder="Position" required />
+                        </div>
+                        <div class="input-box address">
+                            <div class="column">
+                                <input class="mb" type="text" placeholder="Bussines Arena" required />
+                                <div class="select-box mb-5">
+                                    <select>
+                                        <option hidden>Employess</option>
+                                        <option>America</option>
+                                        <option>Japan</option>
+                                        <option>India</option>
+                                        <option>Nepal</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="right-side" class="col-sm-6 jumbotron text-center">
+                    <header>Contact Details</header>
+                    <form action="#" class="form mb-4">
+                        <div class="input-box add">
+                            <input type="text" placeholder="Street + Nr" required />
+                        </div>
+                        <div class="input-box add">
+                            <input type="text" placeholder="Additional Infomation" required />
+                        </div>
+                        <div class="input-box address">
+                            <div class="column">
+                                <input class="mb" type="text" placeholder="Zip Code" required />
+                                <input type="text" placeholder="Place" required />
+                            </div>
+                        </div>
+                        <div class="input-box add">
+                            <input type="text" placeholder="Country" required />
+                        </div>
+                        <div class="input-box address">
+                            <div class="column">
+                                <input class="mb" type="text" placeholder="Code +" required />
+                                <input type="text" placeholder="Phone Number" required />
+                            </div>
+                        </div>
+                        <div class="input-box add">
+                            <input type="text" placeholder="Your Email" required />
+                        </div>
+                        <br>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">&nbsp;I do accept the <u
+                                    role="button">Terms and
+                                    Conditions</u> of Your site. </label>
+                        </div>
+
+                        <button class="mb-4">REGISTER</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
